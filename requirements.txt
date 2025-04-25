@@ -1,0 +1,5 @@
+Django
+google-genai
+sentence-transformers
+faiss-cpu
+pandas

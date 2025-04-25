@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: Inter, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #212122;
+    margin: 0;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 100%;
+    max-width: 90%;
+    background: #212122;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #212122;
+}
+
+/* Scrollbar Styling */
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+.chat-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+.chat-container::-webkit-scrollbar-track {
+    background: #212122;
+}
+
+/* Messages */
+.message {
+    padding: 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.4;
+    font-weight: 400; /* Normal weight for chat messages */
+}
+
+/* User Message (Right Side) */
+.user-message {
+    align-self: flex-end;
+    background: #444;
+    color: #dedede;
+}
+
+/* Bot Message (Left Side) */
+.bot-message {
+    align-self: flex-start;
+    background: #2a2a2a;
+    color: #ddd;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    width: 50%;
+    max-width: 90%;
+    margin-top: 10px;
+    position: relative;
+    bottom: 30px;
+}
+
+/* Input Field */
+input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #303030;
+    color: #fff;
+    outline: none;
+}
+
+/* Button */
+button {
+    margin-left: 10px;
+    padding: 12px;
+    background: #2d2d2d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: 500; /* Slightly bold for buttons */
+}
+
+button:hover {
+    background: #3d3d3d;
+}
+
+/* Clear Chat Button */
+.clear-btn {
+    background: #212121;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.clear-btn:hover {
+    background: #3d3d3d;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.message:hover {
+    filter: brightness(1.2);
+}
+
+h1, h2, h3 {
+    font-weight: 600; /* Bold for headings */
+}
