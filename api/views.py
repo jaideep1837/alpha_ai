@@ -7,6 +7,7 @@ import faiss
 import numpy as np
 import pandas as pd
 import json
+from .agents import FinancialAlphaCrew
 
 # Fuction to generate bot response
 def generator(history):
@@ -78,7 +79,9 @@ def chat_response(request):
             # print("bot:", response_message)
             #-----------------------------------------------------------
             rd, ro = get_operators_and_datafields(user_message)
-            response_message = get_alpha(user_message, rd, ro)
+            # response_message = get_alpha(user_message, rd, ro)
+            financial_alpha_crew = FinancialAlphaCrew()
+            response_message = str(financial_alpha_crew.handle_query(user_message))
             #-----------------------------------------------------------
             return JsonResponse({"response": response_message})
         except Exception as e:
